@@ -22,6 +22,12 @@
       line-height: 1.6;
     }
 
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     /* Header / Nav */
 
     header {
@@ -30,12 +36,6 @@
       position: sticky;
       top: 0;
       z-index: 10;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
     }
 
     .nav-bar {
@@ -123,8 +123,6 @@
       background-color: #f7c4af;
     }
 
-    /* Sections */
-
     section {
       padding: 50px 0;
     }
@@ -185,7 +183,7 @@
       font-size: 14px;
     }
 
-    /* About section */
+    /* About section on homepage */
 
     .about-wrapper {
       display: grid;
@@ -213,16 +211,47 @@
       min-height: 230px;
     }
 
-    /* Footer */
+    /* Footer + social bar */
 
     footer {
       background-color: #ffffff;
       padding: 25px 0;
       border-top: 1px solid #e2d9cf;
-      text-align: center;
+      margin-top: 20px;
       font-size: 12px;
       color: #777777;
-      margin-top: 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-bar {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid #999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-decoration: none;
+      color: #555555;
+    }
+
+    .social-icon:hover {
+      background-color: #f2b8a0;
+      border-color: #f2b8a0;
+      color: #333333;
     }
 
     /* Responsive */
@@ -253,6 +282,11 @@
       .about-wrapper {
         grid-template-columns: 1fr;
       }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -265,9 +299,9 @@
       <div class="logo">Lauren Fallon Designs</div>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#">Policies</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -281,7 +315,9 @@
       <div class="container hero-content">
         <p class="tagline">Handmade accessories</p>
         <h1>Lauren Fallon Designs</h1>
-        <p class="subtitle">Thoughtful pieces for everyday wear, crafted with a focus on comfort, style, and slow fashion.</p>
+        <p class="subtitle">
+          Thoughtful pieces for everyday wear, crafted with a focus on comfort, style, and slow fashion.
+        </p>
         <a href="#" class="btn-primary">Shop the collection</a>
       </div>
     </div>
@@ -295,21 +331,27 @@
 
       <div class="products-grid">
         <div class="product-card">
-          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/3738087/pexels-photo-3738087.jpeg');"></div>
+          <div class="product-image"
+               style="background-image:url('https://images.pexels.com/photos/3738087/pexels-photo-3738087.jpeg');">
+          </div>
           <h3>Textured Knit Tote</h3>
           <p>Soft, slouchy knit tote designed for everyday errands and weekend plans.</p>
           <span class="price">$48.00</span>
         </div>
 
         <div class="product-card">
-          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/3738089/pexels-photo-3738089.jpeg');"></div>
+          <div class="product-image"
+               style="background-image:url('https://images.pexels.com/photos/3738089/pexels-photo-3738089.jpeg');">
+          </div>
           <h3>Layered Pendant Necklace</h3>
-          <p>Simple layered necklace that pairs easily with casual outfits or night out looks.</p>
+          <p>Simple layered necklace that pairs easily with casual outfits or night-out looks.</p>
           <span class="price">$32.00</span>
         </div>
 
         <div class="product-card">
-          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/3738092/pexels-photo-3738092.jpeg');"></div>
+          <div class="product-image"
+               style="background-image:url('https://images.pexels.com/photos/3738092/pexels-photo-3738092.jpeg');">
+          </div>
           <h3>Everyday Scarf</h3>
           <p>Lightweight woven scarf that adds color and texture to daily outfits.</p>
           <span class="price">$28.00</span>
@@ -318,23 +360,35 @@
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT SNIPPET ON HOME -->
   <section>
     <div class="container about-wrapper">
       <div class="about-text">
-        <h2>About Lauren Fallon Designs</h2>
-        <p>Lauren Fallon Designs is a fictional brand created for a class project. The focus is on accessories that feel comfortable, wearable, and special without being overly formal.</p>
-        <p>Each piece is imagined with slow fashion values in mind. The concept highlights small batch production, thoughtful materials, and designs that stay in a wardrobe for more than one season.</p>
-        <p>This homepage is a sample of what an online store could look like before adding full product pages and checkout features.</p>
+        <h2>Designed for Everyday Wear</h2>
+        <p>
+          Lauren Fallon Designs is a fictional brand created for a course project. The idea behind the shop is to
+          offer accessories that feel comfortable, wearable, and special without being overly formal.
+        </p>
+        <p>
+          Each imagined piece reflects slow fashion values: smaller batches, thoughtful materials, and designs that
+          can stay in a wardrobe for more than one season.
+        </p>
       </div>
       <div class="about-image"></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER WITH SOCIAL BAR -->
   <footer>
-    <div class="container">
-      © 2025 Lauren Fallon Designs · Sample site created for a course assignment.
+    <div class="container footer-content">
+      <p>© 2025 Lauren Fallon Designs · Sample site created for a course assignment.</p>
+      <div class="social-bar">
+        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+        <a href="#" class="social-icon" aria-label="TikTok">TT</a>
+        <a href="#" class="social-icon" aria-label="Pinterest">P</a>
+        <a href="#" class="social-icon" aria-label="Facebook">F</a>
+        <a href="mailto:hello@example.com" class="social-icon" aria-label="Email">@</a>
+      </div>
     </div>
   </footer>
 
