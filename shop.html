@@ -23,7 +23,6 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
     header {
       background-color: #ffffff;
       border-bottom: 1px solid #e2d9cf;
@@ -61,7 +60,6 @@
       text-decoration: underline;
     }
 
-    /* PAGE CONTENT */
     main { padding: 50px 0 60px 0; }
 
     .page-title {
@@ -75,7 +73,6 @@
       margin-bottom: 28px;
     }
 
-    /* PRODUCT GRID */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -119,7 +116,6 @@
       font-size: 14px;
     }
 
-    /* FOOTER + SOCIAL BAR */
     footer {
       background-color: #ffffff;
       padding: 25px 0;
@@ -161,20 +157,14 @@
       color: #333333;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav-bar {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
       }
-
       nav ul { flex-wrap: wrap; }
-
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .products-grid { grid-template-columns: 1fr; }
       .footer-content {
         flex-direction: column;
         align-items: flex-start;
@@ -185,7 +175,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="container nav-bar">
       <div class="logo">Lauren Fallon Designs</div>
@@ -201,7 +190,6 @@
     </div>
   </header>
 
-  <!-- PAGE CONTENT -->
   <main>
     <div class="container">
       <h1 class="page-title">Shop</h1>
@@ -209,61 +197,43 @@
 
       <div class="products-grid">
 
-        <!-- 1 -->
         <div class="product-card">
-          <img class="product-img"
-               src="https://placehold.co/1200x800/f3ede6/2b2b2b?text=Textured%20Knit%20Tote"
-               alt="Textured Knit Tote" />
+          <img class="product-img" src="https://source.unsplash.com/1200x800/?tote,bag" alt="Textured Knit Tote" />
           <h3>Textured Knit Tote</h3>
-          <p>A soft, everyday tote designed to be roomy, comfortable to carry, and easy to style.</p>
+          <p>A soft everyday tote designed to be roomy, comfortable to carry, and easy to style.</p>
           <span class="price">$48.00</span>
         </div>
 
-        <!-- 2 -->
         <div class="product-card">
-          <img class="product-img"
-               src="https://placehold.co/1200x800/f3ede6/2b2b2b?text=Layered%20Pendant%20Necklace"
-               alt="Layered Pendant Necklace" />
+          <img class="product-img" src="https://source.unsplash.com/1200x800/?layered,necklace" alt="Layered Pendant Necklace" />
           <h3>Layered Pendant Necklace</h3>
           <p>A simple layered necklace with a small pendant detail for daily wear and easy layering.</p>
           <span class="price">$32.00</span>
         </div>
 
-        <!-- 3 -->
         <div class="product-card">
-          <img class="product-img"
-               src="https://placehold.co/1200x800/f3ede6/2b2b2b?text=Everyday%20Scarf"
-               alt="Everyday Scarf" />
+          <img class="product-img" src="https://source.unsplash.com/1200x800/?scarf,fabric" alt="Everyday Scarf" />
           <h3>Everyday Scarf</h3>
           <p>A lightweight scarf with a soft texture that adds warmth and a polished finishing touch.</p>
           <span class="price">$28.00</span>
         </div>
 
-        <!-- 4 -->
         <div class="product-card">
-          <img class="product-img"
-               src="https://placehold.co/1200x800/f3ede6/2b2b2b?text=Minimal%20Hoop%20Earrings"
-               alt="Minimal Hoop Earrings" />
+          <img class="product-img" src="https://source.unsplash.com/1200x800/?hoop,earrings" alt="Minimal Hoop Earrings" />
           <h3>Minimal Hoop Earrings</h3>
           <p>Classic hoops designed for a clean, simple look that works with everything.</p>
           <span class="price">$22.00</span>
         </div>
 
-        <!-- 5 -->
         <div class="product-card">
-          <img class="product-img"
-               src="https://placehold.co/1200x800/f3ede6/2b2b2b?text=Neutral%20Hair%20Clip%20Set"
-               alt="Neutral Hair Clip Set" />
+          <img class="product-img" src="https://source.unsplash.com/1200x800/?hair,clips" alt="Neutral Hair Clip Set" />
           <h3>Neutral Hair Clip Set</h3>
           <p>A set of everyday hair clips in neutral tones for easy styling and quick grab-and-go.</p>
           <span class="price">$16.00</span>
         </div>
 
-        <!-- 6 -->
         <div class="product-card">
-          <img class="product-img"
-               src="https://placehold.co/1200x800/f3ede6/2b2b2b?text=Canvas%20Zip%20Pouch"
-               alt="Canvas Zip Pouch" />
+          <img class="product-img" src="https://source.unsplash.com/1200x800/?zip,pouch" alt="Canvas Zip Pouch" />
           <h3>Canvas Zip Pouch</h3>
           <p>A small zip pouch for essentials. Great for bags, travel, and simple organization.</p>
           <span class="price">$18.00</span>
@@ -273,7 +243,6 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container footer-content">
       <p>© 2025 Lauren Fallon Designs · Sample site created for a course assignment.</p>
