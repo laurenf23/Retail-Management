@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop – Lauren Fallon Designs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f7f3ee;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2d9cf;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 18px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444444;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* PAGE CONTENT */
+    main { padding: 50px 0 60px 0; }
+
+    .page-title {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .page-subtitle {
+      font-size: 14px;
+      color: #777777;
+      margin-bottom: 30px;
+    }
+
+    /* PRODUCT GRID */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-image {
+      background-color: #e9ded2;
+      border-radius: 10px;
+      height: 160px;
+      margin-bottom: 15px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .product-card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .product-card p {
+      font-size: 13px;
+      color: #666666;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* FOOTER + SOCIAL BAR */
+    footer {
+      background-color: #ffffff;
+      padding: 25px 0;
+      border-top: 1px solid #e2d9cf;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777777;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-bar {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid #999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-decoration: none;
+      color: #555555;
+    }
+
+    .social-icon:hover {
+      background-color: #f2b8a0;
+      border-color: #f2b8a0;
+      color: #333333;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">Lauren Fallon Designs</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main>
+    <div class="container">
+      <h1 class="page-title">Shop</h1>
+      <p class="page-subtitle">Browse a few featured items from the Lauren Fallon Designs collection.</p>
+
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/3738087/pexels-photo-3738087.jpeg');"></div>
+          <h3>Textured Knit Tote</h3>
+          <p>Soft knit tote designed for everyday errands and weekend plans.</p>
+          <span class="price">$48.00</span>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/3738089/pexels-photo-3738089.jpeg');"></div>
+          <h3>Layered Pendant Necklace</h3>
+          <p>Simple layered necklace that pairs easily with casual outfits.</p>
+          <span class="price">$32.00</span>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/3738092/pexels-photo-3738092.jpeg');"></div>
+          <h3>Everyday Scarf</h3>
+          <p>Lightweight woven scarf that adds color and texture to daily outfits.</p>
+          <span class="price">$28.00</span>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/935985/pexels-photo-935985.jpeg');"></div>
+          <h3>Minimal Hoop Earrings</h3>
+          <p>Classic hoops designed for daily wear and easy layering.</p>
+          <span class="price">$22.00</span>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/6044266/pexels-photo-6044266.jpeg');"></div>
+          <h3>Neutral Hair Clip Set</h3>
+          <p>Everyday hair clips in soft tones that match any outfit.</p>
+          <span class="price">$16.00</span>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image" style="background-image:url('https://images.pexels.com/photos/6311652/pexels-photo-6311652.jpeg');"></div>
+          <h3>Canvas Zip Pouch</h3>
+          <p>Small pouch for essentials. Perfect for bags, travel, or gifting.</p>
+          <span class="price">$18.00</span>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <p>© 2025 Lauren Fallon Designs · Sample site created for a course assignment.</p>
+      <div class="social-bar">
+        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+        <a href="#" class="social-icon" aria-label="TikTok">TT</a>
+        <a href="#" class="social-icon" aria-label="Pinterest">P</a>
+        <a href="#" class="social-icon" aria-label="Facebook">F</a>
+        <a href="mailto:hello@example.com" class="social-icon" aria-label="Email">@</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
