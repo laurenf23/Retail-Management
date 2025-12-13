@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – Lauren Fallon Designs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f7f3ee;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2d9cf;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+    }
+
+    .logo { font-weight: 700; letter-spacing: 0.08em; font-size: 18px; }
+
+    nav ul { list-style: none; display: flex; gap: 20px; font-size: 14px; }
+    nav a { text-decoration: none; color: #444444; }
+    nav a:hover { text-decoration: underline; }
+
+    main { padding: 50px 0 60px 0; }
+
+    .page-title { font-size: 34px; margin-bottom: 8px; }
+    .page-subtitle { font-size: 14px; color: #777777; margin-bottom: 28px; max-width: 780px; }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid rgba(226,217,207,0.6);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: #555555;
+      margin-bottom: 6px;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #e2d9cf;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 13px;
+      background-color: #fbf8f4;
+      outline: none;
+    }
+
+    textarea { min-height: 120px; resize: vertical; }
+
+    .btn {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 999px;
+      background-color: #f2b8a0;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .btn:hover { filter: brightness(0.97); }
+
+    .contact-info p {
+      font-size: 13px;
+      color: #555555;
+      margin-bottom: 10px;
+    }
+
+    .contact-info strong { color: #333333; }
+
+    .note {
+      font-size: 12px;
+      color: #777777;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #ffffff;
+      padding: 25px 0;
+      border-top: 1px solid #e2d9cf;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777777;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-bar { display: flex; gap: 10px; }
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid #999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-decoration: none;
+      color: #555555;
+    }
+    .social-icon:hover {
+      background-color: #f2b8a0;
+      border-color: #f2b8a0;
+      color: #333333;
+    }
+
+    @media (max-width: 800px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      nav ul { flex-wrap: wrap; }
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">Lauren Fallon Designs</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Contact</h1>
+      <p class="page-subtitle">
+        Have a question about an item, an order, or general policies? Send a message below and we will respond as soon as possible.
+      </p>
+
+      <div class="contact-layout">
+
+        <div class="card">
+          <form>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name">
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com">
+
+            <label for="topic">Topic</label>
+            <input id="topic" type="text" placeholder="Order question, product info, return, etc.">
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write your message here"></textarea>
+
+            <button class="btn" type="button">Send Message</button>
+
+            <p class="note">
+              This is a sample contact form for a course project and does not send messages.
+            </p>
+          </form>
+        </div>
+
+        <div class="card contact-info">
+          <p><strong>Email:</strong> hello@example.com</p>
+          <p><strong>Response time:</strong> 1 to 2 business days</p>
+          <p><strong>Hours:</strong> Monday through Friday</p>
+          <p><strong>Location:</strong> Online only</p>
+
+          <p class="note">
+            Lauren Fallon Designs is a fictional brand created for a retail management course assignment.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2025 Lauren Fallon Designs · Sample site created for a course assignment.</p>
+      <div class="social-bar">
+        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+        <a href="#" class="social-icon" aria-label="TikTok">TT</a>
+        <a href="#" class="social-icon" aria-label="Pinterest">P</a>
+        <a href="#" class="social-icon" aria-label="Facebook">F</a>
+        <a href="mailto:hello@example.com" class="social-icon" aria-label="Email">@</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
