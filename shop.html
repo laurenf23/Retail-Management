@@ -5,7 +5,7 @@
   <title>Shop – Lauren Fallon Designs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,12 +17,9 @@
       line-height: 1.6;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
 
+    /* HEADER */
     header {
       background-color: #ffffff;
       border-bottom: 1px solid #e2d9cf;
@@ -38,32 +35,17 @@
       padding: 15px 0;
     }
 
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      font-size: 18px;
-    }
+    .logo { font-weight: 700; letter-spacing: 0.08em; font-size: 18px; }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      font-size: 14px;
-    }
+    nav ul { list-style: none; display: flex; gap: 20px; font-size: 14px; }
+    nav a { text-decoration: none; color: #444444; }
+    nav a:hover { text-decoration: underline; }
 
-    nav a {
-      text-decoration: none;
-      color: #444444;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
+    /* PAGE */
     main { padding: 50px 0 60px 0; }
 
     .page-title {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 8px;
     }
 
@@ -71,51 +53,59 @@
       font-size: 14px;
       color: #777777;
       margin-bottom: 28px;
+      max-width: 720px;
     }
 
-    .products-grid {
+    /* PRODUCT GRID */
+    .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-    .product-card {
+    .card {
       background-color: #ffffff;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      border: 1px solid rgba(226,217,207,0.6);
+    }
+
+    .card-media {
+      width: 100%;
+      height: 190px;
+      background-color: #efe7de;
       overflow: hidden;
     }
 
-    .product-img {
+    .card-media img {
       width: 100%;
-      height: 160px;
-      border-radius: 10px;
+      height: 100%;
       object-fit: cover;
       display: block;
-      margin-bottom: 14px;
-      background-color: #efe7de;
     }
 
-    .product-card h3 {
+    .card-body { padding: 16px 16px 18px 16px; }
+
+    .product-name {
       font-size: 16px;
+      font-weight: 700;
       margin-bottom: 6px;
     }
 
-    .product-card p {
+    .product-desc {
       font-size: 13px;
-      color: #666666;
-      margin-bottom: 10px;
+      color: #555555;
+      margin-bottom: 12px;
     }
 
     .price {
-      font-weight: 600;
       font-size: 14px;
+      font-weight: 700;
+      color: #333333;
     }
 
+    /* FOOTER */
     footer {
       background-color: #ffffff;
       padding: 25px 0;
@@ -133,11 +123,8 @@
       flex-wrap: wrap;
     }
 
-    .social-bar {
-      display: flex;
-      gap: 10px;
-    }
-
+    /* SOCIAL ICONS */
+    .social-bar { display: flex; gap: 10px; }
     .social-icon {
       width: 28px;
       height: 28px;
@@ -150,21 +137,25 @@
       text-decoration: none;
       color: #555555;
     }
-
     .social-icon:hover {
       background-color: #f2b8a0;
       border-color: #f2b8a0;
       color: #333333;
     }
 
-    @media (max-width: 768px) {
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
       .nav-bar {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
       }
       nav ul { flex-wrap: wrap; }
-      .products-grid { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
       .footer-content {
         flex-direction: column;
         align-items: flex-start;
@@ -175,6 +166,7 @@
 
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="container nav-bar">
       <div class="logo">Lauren Fallon Designs</div>
@@ -183,66 +175,122 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="policies.html">Policies</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- PAGE CONTENT -->
   <main>
     <div class="container">
       <h1 class="page-title">Shop</h1>
       <p class="page-subtitle">Browse a few featured pieces from the Lauren Fallon Designs collection.</p>
 
-      <div class="products-grid">
+      <div class="grid">
 
-        <div class="product-card">
-          <img class="product-img" src="https://source.unsplash.com/1200x800/?tote,bag" alt="Textured Knit Tote" />
-          <h3>Textured Knit Tote</h3>
-          <p>A soft everyday tote designed to be roomy, comfortable to carry, and easy to style.</p>
-          <span class="price">$48.00</span>
+        <!-- 1 Tote bag -->
+        <div class="card">
+          <div class="card-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Tote_Bag.jpeg?width=1400"
+              alt="Tote bag"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <div class="product-name">Everyday Tote Bag</div>
+            <div class="product-desc">A structured tote designed to hold daily essentials and make errands feel effortless.</div>
+            <div class="price">$48.00</div>
+          </div>
         </div>
 
-        <div class="product-card">
-          <img class="product-img" src="https://source.unsplash.com/1200x800/?layered,necklace" alt="Layered Pendant Necklace" />
-          <h3>Layered Pendant Necklace</h3>
-          <p>A simple layered necklace with a small pendant detail for daily wear and easy layering.</p>
-          <span class="price">$32.00</span>
+        <!-- 2 Pendant necklace -->
+        <div class="card">
+          <div class="card-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Greek_-_Pendant_Necklace_-_Walters_57385.jpg?width=1400"
+              alt="Pendant necklace"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <div class="product-name">Pendant Necklace</div>
+            <div class="product-desc">A simple pendant style that layers easily and adds a polished detail to everyday outfits.</div>
+            <div class="price">$32.00</div>
+          </div>
         </div>
 
-        <div class="product-card">
-          <img class="product-img" src="https://source.unsplash.com/1200x800/?scarf,fabric" alt="Everyday Scarf" />
-          <h3>Everyday Scarf</h3>
-          <p>A lightweight scarf with a soft texture that adds warmth and a polished finishing touch.</p>
-          <span class="price">$28.00</span>
+        <!-- 3 Scarf -->
+        <div class="card">
+          <div class="card-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Scarves_of_loosely_woven_gauze_printed_with_stars.jpg?width=1400"
+              alt="Printed scarf"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <div class="product-name">Printed Scarf</div>
+            <div class="product-desc">A lightweight scarf that adds texture and interest, perfect for layering in any season.</div>
+            <div class="price">$28.00</div>
+          </div>
         </div>
 
-        <div class="product-card">
-          <img class="product-img" src="https://source.unsplash.com/1200x800/?hoop,earrings" alt="Minimal Hoop Earrings" />
-          <h3>Minimal Hoop Earrings</h3>
-          <p>Classic hoops designed for a clean, simple look that works with everything.</p>
-          <span class="price">$22.00</span>
+        <!-- 4 Hoop earrings -->
+        <div class="card">
+          <div class="card-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Hoop_Earring_MET_68.136.12_EGDP019540.jpg?width=1400"
+              alt="Hoop earring"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <div class="product-name">Minimal Hoop Earrings</div>
+            <div class="product-desc">Clean, classic hoops that work with everything and dress up even the simplest look.</div>
+            <div class="price">$22.00</div>
+          </div>
         </div>
 
-        <div class="product-card">
-          <img class="product-img" src="https://source.unsplash.com/1200x800/?hair,clips" alt="Neutral Hair Clip Set" />
-          <h3>Neutral Hair Clip Set</h3>
-          <p>A set of everyday hair clips in neutral tones for easy styling and quick grab-and-go.</p>
-          <span class="price">$16.00</span>
+        <!-- 5 Hair clips -->
+        <div class="card">
+          <div class="card-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Collection_of_hair_clips.jpg?width=1400"
+              alt="Hair clips"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <div class="product-name">Neutral Hair Clip Set</div>
+            <div class="product-desc">A small set of clips in neutral tones for quick styling and easy everyday wear.</div>
+            <div class="price">$16.00</div>
+          </div>
         </div>
 
-        <div class="product-card">
-          <img class="product-img" src="https://source.unsplash.com/1200x800/?zip,pouch" alt="Canvas Zip Pouch" />
-          <h3>Canvas Zip Pouch</h3>
-          <p>A small zip pouch for essentials. Great for bags, travel, and simple organization.</p>
-          <span class="price">$18.00</span>
+        <!-- 6 Zip pouch -->
+        <div class="card">
+          <div class="card-media">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Pencil_case_(9416141198).jpg?width=1400"
+              alt="Zipper pouch"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <div class="product-name">Zipper Pouch</div>
+            <div class="product-desc">A simple zip pouch for essentials, ideal for bags, travel, and staying organized.</div>
+            <div class="price">$18.00</div>
+          </div>
         </div>
 
       </div>
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container footer-content">
       <p>© 2025 Lauren Fallon Designs · Sample site created for a course assignment.</p>
